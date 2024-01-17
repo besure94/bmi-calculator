@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculate Your Body Mass Index</h1>
+      <hr>
+      <h2>What is body mass index?</h2>
+      <p>Body mass index (BMI) is a measure of body fat based on a person's height and weight.</p>
+      <p>Enter your height and weight below, and select "Calculate BMI". Your BMI will appear below.</p>
+      <form>
+        <label>
+          <input type="number" min="0">Height (feet)
+        </label>
+        <label>
+          <input type="number" min="0">Height (inches)
+        </label>
+        <br>
+        <br>
+        <label>
+          <input type="number" min="0"> Weight (pounds)
+        </label>
+        <br>
+        <br>
+        <button type="submit" class="btn-success" id="calculateBMI">Calculate BMI</button>
+      </form>
+      <br>
+      <p id="showCalculation"></p>
+    </div>
+  </body>
+</html>
