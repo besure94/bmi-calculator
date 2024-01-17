@@ -8,7 +8,7 @@ function calculateBmi() {
   const weightInPounds = document.querySelector("#pounds").value;
   const feetToInches = heightInFeet * 12;
   const heightTotal = parseInt(feetToInches) + parseInt(heightInInches);
-  const bmiResult = (weightInPounds / heightTotal**2) * 703;
+  const bmiResult = ((weightInPounds / heightTotal**2) * 703).toFixed(1);
   document.querySelector("p#showCalculation").innerText = `Your BMI is ${bmiResult}.`;
 }
 
