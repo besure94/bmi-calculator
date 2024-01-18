@@ -2,16 +2,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
-function calculateBmiImperialSystem() {
-  const heightInFeet = document.querySelector("#feet").value;
-  const heightInInches = document.querySelector("#inches").value;
-  const weightInPounds = document.querySelector("#pounds").value;
-  const feetToInches = heightInFeet * 12;
-  const heightTotal = parseInt(feetToInches) + parseInt(heightInInches);
-  const bmiResult = ((weightInPounds / heightTotal**2) * 703).toFixed(1);
-  document.querySelector("p#showCalculationImperial").innerText = `Your BMI is ${bmiResult}.`;
-}
-
 function displayForm() {
   const chooseSystem = document.querySelector("input[name='choice']:checked").value;
   const imperialDiv = document.getElementById("imperialDiv");
@@ -25,6 +15,23 @@ function displayForm() {
   }
 }
 
+function calculateBmiImperialSystem() {
+  const heightInFeet = document.querySelector("#feet").value;
+  const heightInInches = document.querySelector("#inches").value;
+  const weightInPounds = document.querySelector("#pounds").value;
+  const feetToInches = heightInFeet * 12;
+  const heightTotal = parseInt(feetToInches) + parseInt(heightInInches);
+  const bmiResult = ((weightInPounds / heightTotal**2) * 703).toFixed(1);
+  document.querySelector("p#showCalculationImperial").innerText = `Your BMI is ${bmiResult}.`;
+}
+
+function calculateBmiMetricSystem() {
+  const heightInCm = document.querySelector("#centimeters").value;
+  const weightinKg = document.querySelector("#kilograms").value;
+  const calculateBmi = ((weightinKg / heightInCm**2) * 10000).toFixed(1);
+  document.querySelector("p#showCalculationMetric").innerText = `Your BMI is ${calculateBmi}.`;
+}
+
 function handleUserChoiceFormSubmission(event) {
   event.preventDefault();
   displayForm();
@@ -35,7 +42,13 @@ function handleImperialFormSubmission(event) {
   calculateBmiImperialSystem();
 }
 
+function handleMetricFormSubmission(event) {
+  event.preventDefault();
+  calculateBmiMetricSystem();
+}
+
 window.addEventListener("load", function() {
   document.querySelector("form#chooseSystem").addEventListener("submit", handleUserChoiceFormSubmission);
   document.querySelector("form#imperialSystem").addEventListener("submit", handleImperialFormSubmission);
+  document.querySelector("form#metricSystem").addEventListener("submit", handleMetricFormSubmission);
 });
