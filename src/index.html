@@ -10,24 +10,57 @@
       <h2>What is body mass index?</h2>
       <p>Body mass index (BMI) is a measure of body fat based on a person's height and weight.</p>
       <p>Enter your height and weight below, and select "Calculate BMI". Your BMI will appear below.</p>
-      <form id="imperialSystem">
-        <label>
-          <input type="number" min="0" id="feet" required> Height (feet)
-        </label>
-        <label>
-          <input type="number" min="0" id="inches" required> Height (inches)
-        </label>
+      <p>To get started, select "Imperial System" or "Metric System", and click "Begin".</p>
+      <form id="chooseSystem">
+        <input type="radio" name="choice" value="imperial" id="imperialBmi">
+        <label for="imperialBmi">Imperial System</label>
         <br>
+        <input type="radio" name="choice" value="metric" id="metricBmi">
+        <label for="metricBmi">Metric System</label>
         <br>
-        <label>
-          <input type="number" min="0" id="pounds" required> Weight (pounds)
-        </label>
-        <br>
-        <br>
-        <button type="submit" class="btn-success" id="calculateBMI">Calculate BMI</button>
+        <button type="submit" class="btn-success" id="begin">Begin</button>
       </form>
       <br>
-      <p id="showCalculation"></p>
+      <div class="hidden" id="imperialDiv">
+        <h4>Imperial System</h4>
+        <form id="imperialSystem">
+          <label>
+            <input type="number" min="0" id="feet" required> Height (feet)
+          </label>
+          <label>
+            <input type="number" min="0" id="inches" required> Height (inches)
+          </label>
+          <br>
+          <br>
+          <label>
+            <input type="number" min="0" id="pounds" required> Weight (pounds)
+          </label>
+          <br>
+          <br>
+          <button type="submit" class="btn-success" id="calculateBmi">Calculate BMI</button>
+        </form>
+        <br>
+        <p id="showCalculationImperial"></p>
+      </div>
+
+      <div class="hidden" id="metricDiv">
+        <h4>Metric System</h4>
+        <form id="metricSystem">
+          <label>
+            <input type="number" min="0" id="centimeters" required> Height (centimeters)
+          </label>
+          <br>
+          <br>
+          <label>
+            <input type="number" min="0" id="kilograms" required> Weight (kilograms)
+          </label>
+          <br>
+          <br>
+          <button type="submit" class="btn-success" id="calculateBmi">Calculate BMI</button>
+        </form>
+        <p id="showCalculationMetric"></p>
+      </div>
+      <br>
     </div>
   </body>
 </html>
