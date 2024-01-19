@@ -25,6 +25,11 @@ function calculateBmiImperialSystem() {
   document.querySelector("p#showCalculationImperial").innerText = `Your BMI is ${bmiResult}.`;
 }
 
+function resetImperialSystemForm() {
+  document.getElementById("imperialSystem").reset();
+  // document.querySelector("p#showCalculationImperial").innerText = "";
+}
+
 function calculateBmiMetricSystem() {
   const heightInCm = document.querySelector("#centimeters").value;
   const weightinKg = document.querySelector("#kilograms").value;
@@ -42,6 +47,11 @@ function handleImperialFormSubmission(event) {
   calculateBmiImperialSystem();
 }
 
+function resetImperialSystemFormSubmission(event) {
+  event.preventDefault();
+  resetImperialSystemForm();
+}
+
 function handleMetricFormSubmission(event) {
   event.preventDefault();
   calculateBmiMetricSystem();
@@ -51,4 +61,5 @@ window.addEventListener("load", function() {
   document.querySelector("form#chooseSystem").addEventListener("submit", handleUserChoiceFormSubmission);
   document.querySelector("form#imperialSystem").addEventListener("submit", handleImperialFormSubmission);
   document.querySelector("form#metricSystem").addEventListener("submit", handleMetricFormSubmission);
+  document.querySelector("form#imperialSystem").addEventListener("submit", resetImperialSystemFormSubmission());
 });
