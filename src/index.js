@@ -37,6 +37,10 @@ function calculateBmiMetricSystem() {
   document.querySelector("p#showCalculationMetric").innerText = `Your BMI is ${calculateBmi}.`;
 }
 
+function resetMetricSystemForm() {
+  document.getElementById("metricSystem").reset();
+}
+
 function handleUserChoiceFormSubmission(event) {
   event.preventDefault();
   displayForm();
@@ -57,9 +61,15 @@ function handleMetricFormSubmission(event) {
   calculateBmiMetricSystem();
 }
 
+function resetMetricSystemFormSubmission(event) {
+  event.preventDefault();
+  resetMetricSystemForm();
+}
+
 window.addEventListener("load", function() {
   document.querySelector("form#chooseSystem").addEventListener("submit", handleUserChoiceFormSubmission);
   document.querySelector("form#imperialSystem").addEventListener("submit", handleImperialFormSubmission);
   document.querySelector("form#metricSystem").addEventListener("submit", handleMetricFormSubmission);
   document.querySelector("form#imperialSystem").addEventListener("submit", resetImperialSystemFormSubmission());
+  document.querySelector("form#metricSystem").addEventListener("submit", resetMetricSystemFormSubmission());
 });
