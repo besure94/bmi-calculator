@@ -39,12 +39,13 @@ h4 {
 }
 
 hr {
-  color: #ffea00;
+  border: 2px solid #ffffff;
 }
 
 #imperial {
   color: #ff0000;
   font-weight: 700;
+  font-size: large;
 }
 
 input {
@@ -59,6 +60,7 @@ label {
 #metric {
   color: #ff0000;
   font-weight: 700;
+  font-size: large;
 }
 
 p {
