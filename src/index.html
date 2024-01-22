@@ -11,28 +11,28 @@
       <p>Body mass index (BMI) is a measure of body fat based on a person's height and weight. Listed below are the five BMI categories:</p>
       <table>
         <tr>
-          <th>BMI</th>
-          <th>Weight Status</th>
+          <th id="bmi">BMI</th>
+          <th id="weight">Weight Status</th>
         </tr>
         <tr>
-          <td>Below 18.5</td>
-          <td>Underweight</td>
+          <td id="bmi">Below 18.5</td>
+          <td id="weight">Underweight</td>
         </tr>
         <tr>
-          <td>18.5 - 24.9</td>
-          <td>Healthy Weight</td>
+          <td id="bmi">18.5 - 24.9</td>
+          <td id="weight">Healthy Weight</td>
         </tr>
         <tr>
-          <td>25.0 - 29.9</td>
-          <td>Overweight</td>
+          <td id="bmi">25.0 - 29.9</td>
+          <td id="weight">Overweight</td>
         </tr>
         <tr>
-          <td>30 - 39.9</td>
-          <td>Obesity</td>
+          <td id="bmi">30 - 39.9</td>
+          <td id="weight">Obesity</td>
         </tr>
         <tr>
-          <td>40 or over</td>
-          <td>Severe Obesity</td>
+          <td id="bmi">40 or over</td>
+          <td id="weight">Severe Obesity</td>
         </tr>
       </table>
       <br>
@@ -42,10 +42,10 @@
       <p>Enter your height and weight, and select "Calculate BMI". Your BMI will appear below.</p>
       <form id="chooseSystem">
         <input type="radio" name="choice" value="imperial" id="imperialBmi">
-        <label for="imperialBmi">Imperial System</label>
+        <label for="imperialBmi" id="imperial">Imperial System</label>
         <br>
         <input type="radio" name="choice" value="metric" id="metricBmi">
-        <label for="metricBmi">Metric System</label>
+        <label for="metricBmi" id="metric">Metric System</label>
         <br>
         <br>
         <button type="submit" class="btn-success" id="begin">Choose System</button>
@@ -53,6 +53,7 @@
       <br>
       <div class="hidden" id="imperialDiv">
         <h4>Imperial System</h4>
+        <br>
         <form id="imperialSystem">
           <label>
             <input type="number" min="0" id="feet" required> Height (feet)
@@ -77,6 +78,7 @@
 
       <div class="hidden" id="metricDiv">
         <h4>Metric System</h4>
+        <br>
         <form id="metricSystem">
           <label>
             <input type="number" min="0" id="centimeters" required> Height (centimeters)

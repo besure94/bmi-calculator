@@ -1,15 +1,112 @@
+body {
+  background-color: #000000;
+}
+
+#begin {
+  background-color: #ff0000;
+  color: #000000;
+  font-weight: 700;
+}
+
+#bmi {
+  color: #ff0000;
+  font-weight: 700;
+}
+
+#calculateBmi {
+  background-color: #ff0000;
+  color: #000000;
+  font-weight: 700;
+}
+
+h1 {
+  color: #ff0000;
+  font-weight: 900;
+}
+
+h2 {
+  color: #ff0000;
+  font-weight: 700;
+}
+
+h4 {
+  color: #ff0000;
+  font-weight: 700;
+}
+
 .hidden {
   display: none;
 }
 
+hr {
+  color: #ffea00;
+}
+
+#imperial {
+  color: #ff0000;
+  font-weight: 700;
+}
+
+input {
+  font-weight: 700;
+}
+
+label {
+  color: #ff0000;
+  font-weight: 700;
+}
+
+#metric {
+  color: #ff0000;
+  font-weight: 700;
+}
+
+p {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+#resetForm {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+}
+
+#resetButton {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+}
+
+#showCalculationImperial {
+  font-size: larger;
+  font-weight: 700;
+  color: #ff0000;
+}
+
+#showCalculationMetric {
+  font-size: larger;
+  font-weight: 700;
+  color: #ff0000;
+}
+
+strong {
+  color: #ff0000;
+}
+
 table {
-  width: 40%;
+  width: 75%;
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid #ffffff;
 }
 
 th, td {
   padding: 15px;
+}
+
+#weight {
+  color: #ffffff;
+  font-weight: 700;
 }
