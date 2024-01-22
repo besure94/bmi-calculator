@@ -6,17 +6,20 @@ body {
   background-color: #ff0000;
   color: #000000;
   font-weight: 700;
+  font-size: large;
 }
 
 #bmi {
   color: #ff0000;
   font-weight: 700;
+  font-size: large;
 }
 
 #calculateBmi {
   background-color: #ff0000;
   color: #000000;
   font-weight: 700;
+  font-size: large;
 }
 
 h1 {
@@ -55,6 +58,7 @@ input {
 label {
   color: #ff0000;
   font-weight: 700;
+  font-size: large;
 }
 
 #metric {
@@ -66,18 +70,21 @@ label {
 p {
   color: #ffffff;
   font-weight: 600;
+  font-size: large;
 }
 
 #resetForm {
   background-color: #ffffff;
   color: #000000;
   font-weight: 700;
+  font-size: large;
 }
 
 #resetButton {
   background-color: #ffffff;
   color: #000000;
   font-weight: 700;
+  font-size: large;
 }
 
 #showCalculationImperial {
@@ -111,4 +118,5 @@ th, td {
 #weight {
   color: #ffffff;
   font-weight: 700;
+  font-size: large;
 }
