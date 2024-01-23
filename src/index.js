@@ -7,7 +7,7 @@ function hideBmiResultsOnImperialFormReset() {
 }
 
 function hideBmiResultsOnMetricFormReset() {
-  document.querySelector("p#showCalculationMetric").setAttribute("class", "hidden");
+  document.querySelector("h3#showCalculationMetric").setAttribute("class", "hidden");
 }
 
 function resetImperialSystemForm() {
