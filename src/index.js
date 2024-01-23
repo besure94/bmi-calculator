@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 
 function hideBmiResultsOnImperialFormReset() {
-  document.querySelector("p#showCalculationImperial").setAttribute("class", "hidden");
+  document.querySelector("h3#showCalculationImperial").setAttribute("class", "hidden");
 }
 
 function hideBmiResultsOnMetricFormReset() {
@@ -41,8 +41,8 @@ window.addEventListener("load", function() {
     const feetToInches = heightInFeet * 12;
     const heightTotal = parseInt(feetToInches) + parseInt(heightInInches);
     const bmiResult = ((weightInPounds / heightTotal**2) * 703).toFixed(1);
-    document.querySelector("p#showCalculationImperial").removeAttribute("class", "hidden");
-    document.querySelector("p#showCalculationImperial").innerText = `Your BMI is ${bmiResult}.`;
+    document.querySelector("h3#showCalculationImperial").removeAttribute("class", "hidden");
+    document.querySelector("h3#showCalculationImperial").innerText = `BMI: ${bmiResult}`;
 
     document.getElementById("resetForm").addEventListener("click", function (resetEvent) {
       resetEvent.preventDefault();
@@ -56,8 +56,8 @@ window.addEventListener("load", function() {
     const heightInCm = document.querySelector("#centimeters").value;
     const weightinKg = document.querySelector("#kilograms").value;
     const calculateBmi = ((weightinKg / heightInCm**2) * 10000).toFixed(1);
-    document.querySelector("p#showCalculationMetric").removeAttribute("class", "hidden");
-    document.querySelector("p#showCalculationMetric").innerText = `Your BMI is ${calculateBmi}.`;
+    document.querySelector("h3#showCalculationMetric").removeAttribute("class", "hidden");
+    document.querySelector("h3#showCalculationMetric").innerText = `BMI: ${calculateBmi}`;
 
     document.getElementById("resetButton").addEventListener("click", function(resetMetricEvent) {
       resetMetricEvent.preventDefault();

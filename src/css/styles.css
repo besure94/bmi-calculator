@@ -88,15 +88,13 @@ p {
 }
 
 #showCalculationImperial {
-  font-size: larger;
   font-weight: 700;
-  color: #ff0000;
+  color: #ffffff;
 }
 
 #showCalculationMetric {
-  font-size: larger;
   font-weight: 700;
-  color: #ff0000;
+  color: #ffffff;
 }
 
 strong {
